@@ -1,0 +1,106 @@
+<title>Vdbench output/localhost-0.stdout.html</title><pre>
+stdout/stderr for slave=localhost-0
+
+11:50:54.391 11:50:54.390 SlaveJvm execution parameter:  '-m localhost'
+11:50:54.393 11:50:54.392 SlaveJvm execution parameter:  '-n localhost-10-221114-11.50.53.838'
+11:50:54.393 11:50:54.393 SlaveJvm execution parameter:  '-l localhost-0'
+11:50:54.394 11:50:54.393 SlaveJvm execution parameter:  '-p 5570'
+11:50:54.395 11:50:54.394 SlaveJvm positional parameter: 'SlaveJvm'
+11:50:54.467 11:50:54.466 successfully connected to master localhost
+11:50:54.469 11:50:54.469 Connection to localhost using port 5570 successful
+11:50:54.950 11:50:54.950 ticks_per_second: 100
+11:50:55.008 11:50:55.008 execute(): ls -l /root/old-pool/
+11:50:55.057 11:50:55.057 Configuration interpretation took 0.08 seconds
+
+Link to Run Definitions:         <A HREF="#_1595212853">format_for_rd1 For loops: None</A>
+                                 <A HREF="#_475266352">rd1 For loops: None</A>
+
+11:50:55.317 11:50:55.317 Beginning of run setup
+11:50:55.317 11:50:55.317 **********************
+11:50:55.317 
+11:50:55.317 
+11:50:55.463 11:50:55.462 Deleting old file structure.
+11:50:55.469 11:50:55.469 Starting initializeFileAnchor for rd=format_for_rd1 For loops: None anchor=fsd1
+11:50:55.479 11:50:55.478 Completed the creation of the directory list for /root/old-pool/: 1 directories.
+11:50:55.480 11:50:55.479 Generated 2 file names; total anchor size: 2g (2,147,483,648)
+11:50:55.480 11:50:55.480 Writing control file for anchor=/root/old-pool/ at start of run.
+11:50:55.521 11:50:55.520 Completed control file for anchor=/root/old-pool/ at start of run.  dirs: 1/0 files: 2/0 sizes: 2g/0/0/0
+11:50:55.531 11:50:55.530 Completed initializeFileAnchor for fsd1: 0.06
+11:50:55.583 11:50:55.582 Started 8 threads for fwd=format,fsd=fsd1
+11:50:55.583 11:50:55.582 Started 8 FwgThreads for rd=format_for_rd1 For loops: None
+11:50:55.583 11:50:55.582 Waiting for task synchronization
+11:50:55.583 11:50:55.582 task_wait_start_complete: FwgThread OpFormat /root/old-pool/ 1
+11:50:55.784 11:50:55.783 Requesting full garbage collection
+11:50:55.785 11:50:55.785 GcTracker: cum:   1 intv:  1 ms:      12 mss:  0.00% Heap_MB max:   990 curr:   124 used:    18 free:   106 
+11:50:55.796 11:50:55.796 GcTracker: cum:   2 intv:  1 ms:       9 mss:  0.00% Heap_MB max:   990 curr:   124 used:    17 free:   107 
+11:50:55.798 11:50:55.798 task_wait_start_complete() end
+
+<a name="_1595212853"></a><i><b>11:50:56.003 Starting RD=format_for_rd1</b></i>
+
+11:50:56.005 11:50:56.005 task_run_all(): 9 tasks
+11:50:56.248 11:50:56.245 Message to master: anchor=/root/old-pool/ mkdir complete.
+11:51:02.670 11:51:02.670 Message to master: anchor=/root/old-pool/ create complete.
+11:51:02.776 11:51:02.775 
+11:51:02.777 11:51:02.777 Miscellaneous statistics:
+11:51:02.779 11:51:02.778 FILE_CREATES        Files created:                                    2
+11:51:02.780 11:51:02.780 DIRECTORY_CREATES   Directories created:                              1
+11:51:02.781 11:51:02.780 FILE_DELETES        Files deleted:                                  450
+11:51:02.786 11:51:02.785 DIRECTORY_DELETES   Directories deleted:                             12
+11:51:02.787 11:51:02.786 WRITE_OPENS         Files opened for write activity:                  2
+11:51:02.788 11:51:02.788 DIR_EXISTS          Directory may not exist (yet):                    3
+11:51:02.795 11:51:02.794 FILE_CLOSES         Close requests:                                   2
+11:51:02.796 11:51:02.796 
+11:51:02.802 11:51:02.802 Java Heap in MB. max:  989.875; current:  123.938; used:   25.960; free:   97.978
+11:51:02.806 11:51:02.804 Maximum native memory allocation:    1,048,576; Current allocation:    1,048,576
+11:51:03.116 11:51:03.115 Writing control file for anchor=/root/old-pool/ at end of run.
+11:51:03.140 11:51:03.137 Completed control file for anchor=/root/old-pool/ at end of run.  dirs: 1/1 files: 2/2 sizes: 2g/2g/2/2g
+11:51:03.142 11:51:03.142 End of run
+11:51:03.145 11:51:03.145 **********
+11:51:03.146 
+11:51:03.146 
+11:51:03.281 11:51:03.281 Beginning of run setup
+11:51:03.285 11:51:03.285 **********************
+11:51:03.285 
+11:51:03.285 
+11:51:03.336 11:51:03.336 Starting initializeFileAnchor for rd=rd1 For loops: None anchor=fsd1
+11:51:03.338 11:51:03.337 Reading control file for anchor=/root/old-pool/
+11:51:03.339 11:51:03.339 Completed reading control file.
+11:51:03.340 11:51:03.340 Completed the creation of the directory list for /root/old-pool/: 1 directories.
+11:51:03.341 11:51:03.341 Generated 2 file names; total anchor size: 2g (2,147,483,648)
+11:51:03.342 11:51:03.341 Writing control file for anchor=/root/old-pool/ at start of run.
+11:51:03.359 11:51:03.358 Completed control file for anchor=/root/old-pool/ at start of run.  dirs: 1/1 files: 2/2 sizes: 2g/2g/0/0
+11:51:03.360 11:51:03.359 During anchor creation for anchor=/root/old-pool/ there were 1 directories and 2 files
+11:51:03.360 11:51:03.359 Completed initializeFileAnchor for fsd1: 0.02
+11:51:03.363 11:51:03.362 Started 2 threads for fwd=fwd1,fsd=fsd1,operation=create
+11:51:03.363 11:51:03.363 Started 2 FwgThreads for rd=rd1 For loops: None
+11:51:03.363 11:51:03.363 Waiting for task synchronization
+11:51:03.363 11:51:03.363 task_wait_start_complete: FwgWaiter 1
+11:51:03.564 11:51:03.563 Requesting full garbage collection
+11:51:03.565 11:51:03.564 GcTracker: cum:   2 intv:  0 ms:       0 mss:  0.00% Heap_MB max:   990 curr:   124 used:    31 free:    93 
+11:51:03.580 11:51:03.579 GcTracker: cum:   3 intv:  1 ms:      13 mss:  0.00% Heap_MB max:   990 curr:   124 used:    19 free:   105 
+11:51:03.580 11:51:03.579 task_wait_start_complete() end
+
+<a name="_475266352"></a><i><b>11:51:04.001 Starting RD=rd1; elapsed=30; fwdrate=max. For loops: None</b></i>
+
+11:51:04.006 11:51:04.006 task_run_all(): 3 tasks
+11:51:04.370 11:51:04.369 Anchor: /root/old-pool/
+11:51:04.370 11:51:04.369 Vdbench is trying to create a new file, but all files already exist, 
+11:51:04.370 11:51:04.369 and no threads are currently active deleting files
+11:51:04.370 11:51:04.369 FwgThread.canWeGetMoreFiles(): Shutting down threads for operation=create
+11:51:04.370 11:51:04.369 
+11:51:04.370 11:51:04.369 sendMessageToConsole: Anchor: /root/old-pool/
+11:51:04.370 11:51:04.369 sendMessageToConsole: Vdbench is trying to create a new file, but all files already exist, 
+11:51:04.370 11:51:04.369 sendMessageToConsole: and no threads are currently active deleting files
+11:51:04.370 11:51:04.369 sendMessageToConsole: FwgThread.canWeGetMoreFiles(): Shutting down threads for operation=create
+11:51:04.370 11:51:04.370 sendMessageToConsole: 
+11:51:04.477 11:51:04.477 Miscellaneous statistics: All counters are zero
+11:51:04.479 11:51:04.478 Java Heap in MB. max:  989.875; current:  123.875; used:   21.455; free:  102.420
+11:51:04.479 11:51:04.478 Maximum native memory allocation:    1,056,768; Current allocation:        8,192
+11:51:05.059 11:51:05.059 Writing control file for anchor=/root/old-pool/ at end of run.
+11:51:05.097 11:51:05.096 Completed control file for anchor=/root/old-pool/ at end of run.  dirs: 1/1 files: 2/2 sizes: 2g/2g/0/0
+11:51:05.097 11:51:05.096 End of run
+11:51:05.097 11:51:05.096 **********
+11:51:05.097 
+11:51:05.097 
+11:51:06.150 11:51:06.150 Master is requesting slave shutdown
+11:51:06.150 11:51:06.150 Java Heap in MB. max:  989.875; current:  123.875; used:   22.839; free:  101.036

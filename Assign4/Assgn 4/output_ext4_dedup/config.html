@@ -1,0 +1,127 @@
+<title>Vdbench output/config.html</title><pre>
+Output from script /root/vdbench/linux/config.sh: 
+
+Mon Nov 14 11:48:35 AM EST 2022
+>>>>>uname -a
+Linux kali 5.18.0-kali7-amd64 #1 SMP PREEMPT_DYNAMIC Debian 5.18.16-1kali1 (2022-08-31) x86_64 GNU/Linux
+Mon Nov 14 11:48:35 AM EST 2022
+>>>>>ifconfig -a
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.4  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::a00:27ff:fec8:36ac  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:c8:36:ac  txqueuelen 1000  (Ethernet)
+        RX packets 1228  bytes 633511 (618.6 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1185  bytes 159019 (155.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1470  bytes 206363 (201.5 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1470  bytes 206363 (201.5 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+Mon Nov 14 11:48:35 AM EST 2022
+>>>>>id
+uid=0(root) gid=0(root) groups=0(root)
+Mon Nov 14 11:48:35 AM EST 2022
+>>>>>mount
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=978216k,nr_inodes=244554,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=202928k,mode=755,inode64)
+/dev/sda1 on / type ext4 (rw,relatime,errors=remount-ro)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=29,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=12802)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime,pagesize=2M)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+ramfs on /run/credentials/systemd-sysusers.service type ramfs (ro,nosuid,nodev,noexec,relatime,mode=700)
+new-pool on /new-pool type zfs (rw,xattr,noacl)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)
+sunrpc on /run/rpc_pipefs type rpc_pipefs (rw,relatime)
+tmpfs on /run/user/0 type tmpfs (rw,nosuid,nodev,relatime,size=202924k,nr_inodes=50731,mode=700,inode64)
+gvfsd-fuse on /run/user/0/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime,user_id=0,group_id=0)
+portal on /run/user/0/doc type fuse.portal (rw,nosuid,nodev,relatime,user_id=0,group_id=0)
+/dev/sdc on /media/root/old-pool type ext4 (rw,nosuid,nodev,relatime,errors=remount-ro,uhelper=udisks2)
+Shared on /mnt type vboxsf (rw,relatime)
+Mon Nov 14 11:48:35 AM EST 2022
+>>>>>memory
+MemTotal:        2029256 kB
+MemFree:          144740 kB
+MemAvailable:     354524 kB
+Buffers:           14920 kB
+Cached:           337576 kB
+SwapCached:       119836 kB
+Active:           309568 kB
+Inactive:         999988 kB
+Active(anon):      98840 kB
+Inactive(anon):   890464 kB
+Active(file):     210728 kB
+Inactive(file):   109524 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:        998396 kB
+SwapFree:         688244 kB
+Dirty:               300 kB
+Writeback:             0 kB
+AnonPages:        830948 kB
+Mapped:           181416 kB
+Shmem:             32200 kB
+KReclaimable:      41988 kB
+Slab:              90016 kB
+SReclaimable:      41988 kB
+SUnreclaim:        48028 kB
+KernelStack:        9416 kB
+PageTables:        16252 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     2013024 kB
+Committed_AS:    4193708 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       66972 kB
+VmallocChunk:          0 kB
+Percpu:              796 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    366592 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      153536 kB
+DirectMap2M:     1943552 kB
+               total        used        free      shared  buff/cache   available
+Mem:         2029256     1490284      144488       32200      394484      354316
+Low:         2029256     1884768      144488
+High:              0           0           0
+Swap:         998396      310152      688244
+Mon Nov 14 11:48:35 AM EST 2022
+>>>>>ps -ef | grep -i vdb
+root        3149    2181  0 11:48 pts/0    00:00:00 sudo ./vdbench -f workload1 anchor=/root/old-pool
+root        3150    3149  0 11:48 pts/1    00:00:00 sudo ./vdbench -f workload1 anchor=/root/old-pool
+root        3151    3150  0 11:48 pts/1    00:00:00 /bin/bash ./vdbench -f workload1 anchor=/root/old-pool
+root        3153    3151 35 11:48 pts/1    00:00:00 java -client -Xmx512m -Xms64m -cp ./:./classes:./vdbench.jar Vdb.Vdbmain -f workload1 anchor=/root/old-pool
+root        3173    3153  0 11:48 pts/1    00:00:00 /bin/bash /root/vdbench/vdbench SlaveJvm -m localhost -n localhost-10-221114-11.48.33.682 -l localhost-0 -p 5570
+root        3177    3173 49 11:48 pts/1    00:00:00 java -client -Xmx1024m -Xms128m -cp /root/vdbench/:/root/vdbench/classes:/root/vdbench/vdbench.jar Vdb.SlaveJvm SlaveJvm -m localhost -n localhost-10-221114-11.48.33.682 -l localhost-0 -p 5570
+root        3203    3153  0 11:48 pts/1    00:00:00 /bin/bash /root/vdbench/linux/config.sh -o /root/vdbench/output localhost
+root        3219    3203  0 11:48 pts/1    00:00:00 grep -i vdb
+

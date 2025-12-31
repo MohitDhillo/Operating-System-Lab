@@ -1,0 +1,93 @@
+<title>Vdbench output/logfile.html</title><pre>
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+Vdbench distribution: vdbench50407
+
+11:50:04.726 input argument scanned: '-fworkload2'
+11:50:04.729 input argument scanned: 'anchor=/new-pool'
+11:50:04.732 java.vendor                   Debian
+11:50:04.732 java.home                     /usr/lib/jvm/java-11-openjdk-amd64
+11:50:04.732 java.vm.specification.version 11
+11:50:04.732 java.vm.version               11.0.16+8-post-Debian-1
+11:50:04.732 java.vm.vendor                Debian
+11:50:04.732 java.specification.version    11
+11:50:04.733 java.class.version            55.0
+11:50:04.733 user.name                     root
+11:50:04.733 user.dir                      /root/vdbench
+11:50:04.733 java.io.tmpdir                /tmp
+11:50:04.733 java.class.path               ./:./classes:./vdbench.jar
+11:50:04.733 os.name                       Linux
+11:50:04.733 os.arch                       amd64
+11:50:04.733 os.version                    5.18.0-kali7-amd64
+11:50:04.733 sun.arch.data.model           64
+11:50:04.744 Flushing all reports
+11:50:04.803 Creating anchor for /new-pool,fsd=fsd1
+11:50:04.842 rd1 fsd to format: fsd1
+11:50:04.842 rd1 format on host: localhost
+11:50:04.848 Anchor size: anchor=/new-pool: dirs:            0; files:            2; bytes:     2.000g (2,147,483,648)
+11:50:04.983 Starting slave: /root/vdbench/vdbench SlaveJvm -m localhost -n localhost-10-221114-11.50.04.599 -l localhost-0 -p 5570   
+11:50:05.555 Slave localhost-0 (pid   3295) connected to master 3271
+11:50:05.598 All slaves are now connected
+
+Link to Run Definitions:         <A HREF="#_1595212853">format_for_rd1 For loops: None</A>
+                                 <A HREF="#_475266352">rd1 For loops: None</A>
+
+11:50:05.927 Flushing all reports
+11:50:05.930 slv=localhost-0 fwd=format fsd=fsd1 anchor=/new-pool threads= 8 skew= 0.00 operation=read 
+11:50:06.009 Waiting for synchronization of all slaves
+11:50:06.715 Synchronization of all slaves complete
+
+<a name="_1595212853"></a><i><b>11:50:07.002 Starting RD=format_for_rd1</b></i>
+
+11:50:07.577 localhost-0: anchor=/new-pool mkdir complete.
+Nov 14, 2022 ..Interval.. .ReqstdOps... ...cpu%...  read ....read..... ....write.... ..mb/sec... mb/sec .xfer.. ...mkdir.... ...rmdir.... ...create... ....open.... ...close.... ...delete...
+                            rate   resp total  sys   pct   rate   resp   rate   resp  read write  total    size  rate   resp  rate   resp  rate   resp  rate   resp  rate   resp  rate   resp
+11:50:08.226            1 1060.0  0.246  46.9 12.0   0.0    0.0  0.000 1060.0  0.246  0.00 132.5 132.50  131072   1.0  0.117  12.0  0.458   0.0  0.000   2.0  0.730   0.0  0.000 450.0  0.392
+11:50:09.053            2 2711.0  0.887  77.8 43.4   0.0    0.0  0.000 2711.0  0.887  0.00 338.8 338.88  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+11:50:10.028            3 3214.0  0.637  75.5 51.0   0.0    0.0  0.000 3214.0  0.637  0.00 401.7 401.75  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+11:50:11.154            4 3036.0  0.621  67.3 48.5   0.0    0.0  0.000 3036.0  0.621  0.00 379.5 379.50  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+11:50:12.025            5 2949.0  0.718  62.0 45.0   0.0    0.0  0.000 2949.0  0.718  0.00 368.6 368.62  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+11:50:13.016            6 3023.0  0.664  74.0 47.9   0.0    0.0  0.000 3023.0  0.664  0.00 377.8 377.88  131072   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+11:50:13.213 localhost-0: anchor=/new-pool create complete.
+11:50:14.013            7  391.0  1.159  55.0 8.00   0.0    0.0  0.000  391.0  1.159  0.00 48.88  48.88  131072   0.0  0.000   0.0  0.000   2.0 5629.7   0.0  0.000   2.0  0.075   0.0  0.000
+11:50:14.033      avg_2-7 2554.0  0.712  68.5 40.5   0.0    0.0  0.000 2554.0  0.712  0.00 319.2 319.25  131072   0.0  0.000   0.0  0.000   0.3 5629.7   0.0  0.000   0.3  0.075   0.0  0.000
+11:50:14.040      std_2-7 1072.1 10.861                                1072.1 10.861                                                        0.8  4.092                0.8  0.065             
+11:50:14.045      max_2-7 3214.0 336.19                                3214.0 336.19                                   0.117        2.747   2.0 5632.5        1.093   2.0  0.121       19.291
+11:50:14.232 
+11:50:14.233 Miscellaneous statistics:
+11:50:14.235 (These statistics do not include activity between the last reported interval and shutdown.)
+11:50:14.235 FILE_CREATES        Files created:                                    2          0/sec
+11:50:14.235 DIRECTORY_CREATES   Directories created:                              1          0/sec
+11:50:14.235 FILE_DELETES        Files deleted:                                  450         64/sec
+11:50:14.236 DIRECTORY_DELETES   Directories deleted:                             12          1/sec
+11:50:14.236 WRITE_OPENS         Files opened for write activity:                  2          0/sec
+11:50:14.236 DIR_EXISTS          Directory may not exist (yet):                    3          0/sec
+11:50:14.236 FILE_CLOSES         Close requests:                                   2          0/sec
+11:50:14.236 
+11:50:14.237 Flushing all reports
+11:50:14.242 Java Heap in MB. max:  494.938; current:   61.875; used:   24.499; free:   37.376
+11:50:14.277 slv=localhost-0 fwd=fwd1 fsd=fsd1 anchor=/new-pool threads= 2 skew= 0.00 operation=create 
+11:50:14.292 Waiting for synchronization of all slaves
+11:50:14.693 Synchronization of all slaves complete
+
+<a name="_475266352"></a><i><b>11:50:15.001 Starting RD=rd1; elapsed=30; fwdrate=max. For loops: None</b></i>
+
+11:50:15.394 
+11:50:15.394 Message from slave localhost-0: 
+11:50:15.394 Anchor: /new-pool
+11:50:15.394 Vdbench is trying to create a new file, but all files already exist, 
+11:50:15.394 and no threads are currently active deleting files
+11:50:15.394 FwgThread.canWeGetMoreFiles(): Shutting down threads for operation=create
+11:50:15.394 
+Nov 14, 2022 ..Interval.. .ReqstdOps... ...cpu%...  read ....read..... ....write.... ..mb/sec... mb/sec .xfer.. ...mkdir.... ...rmdir.... ...create... ....open.... ...close.... ...delete...
+                            rate   resp total  sys   pct   rate   resp   rate   resp  read write  total    size  rate   resp  rate   resp  rate   resp  rate   resp  rate   resp  rate   resp
+11:50:16.019            1    0.0  0.000  23.2 3.03   0.0    0.0  0.000    0.0  0.000  0.00  0.00   0.00       0   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000   0.0  0.000
+11:50:16.038      avg_2-1 NaN  0.000 NaN NaN   0.0 NaN  0.000 NaN  0.000 NaN NaN NaN       0 NaN  0.000 NaN  0.000 NaN  0.000 NaN  0.000 NaN  0.000 NaN  0.000
+11:50:16.039      std_2-1                                                                                                                                                                    
+11:50:16.039      max_2-1                                                                                                                                                                    
+11:50:16.161 Miscellaneous statistics: All counters are zero
+11:50:16.161 Flushing all reports
+11:50:16.161 Java Heap in MB. max:  494.938; current:   62.000; used:   20.216; free:   41.784
+11:50:16.182 Ending Reporter
+11:50:17.039 Vdbench execution completed successfully. Output directory: /root/vdbench/output 
+
+11:50:18.046 Java Heap in MB. max:  494.938; current:   62.000; used:   17.649; free:   44.351

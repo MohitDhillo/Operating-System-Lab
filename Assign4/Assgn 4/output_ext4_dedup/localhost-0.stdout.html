@@ -1,0 +1,158 @@
+<title>Vdbench output/localhost-0.stdout.html</title><pre>
+stdout/stderr for slave=localhost-0
+
+11:48:34.271 11:48:34.270 SlaveJvm execution parameter:  '-m localhost'
+11:48:34.272 11:48:34.272 SlaveJvm execution parameter:  '-n localhost-10-221114-11.48.33.682'
+11:48:34.273 11:48:34.273 SlaveJvm execution parameter:  '-l localhost-0'
+11:48:34.273 11:48:34.273 SlaveJvm execution parameter:  '-p 5570'
+11:48:34.274 11:48:34.274 SlaveJvm positional parameter: 'SlaveJvm'
+11:48:34.351 11:48:34.350 successfully connected to master localhost
+11:48:34.351 11:48:34.351 Connection to localhost using port 5570 successful
+11:48:34.832 11:48:34.831 ticks_per_second: 100
+11:48:34.842 11:48:34.841 Message to master: Created anchor directory: /root/old-pool
+11:48:34.870 11:48:34.870 execute(): ls -l /root/old-pool
+11:48:34.976 11:48:34.976 Configuration interpretation took 0.13 seconds
+
+Link to Run Definitions:         <A HREF="#_42121758">format_for_rd1 For loops: None</A>
+                                 <A HREF="#_20671747">rd1 For loops: None</A>
+
+11:48:35.270 11:48:35.269 Beginning of run setup
+11:48:35.277 11:48:35.277 **********************
+11:48:35.278 
+11:48:35.278 
+11:48:35.488 11:48:35.488 Deleting old file structure.
+11:48:35.493 11:48:35.493 Starting initializeFileAnchor for rd=format_for_rd1 For loops: None anchor=fsd1
+11:48:35.496 11:48:35.496 Completed the creation of the directory list for /root/old-pool: 12 directories.
+11:48:35.506 11:48:35.506 Generated 450 file names; total anchor size: 450m (471,859,200)
+11:48:35.524 11:48:35.521 Created flipflop bitmap for fsd1. 1 bitmaps for a total of 452 bits.
+11:48:35.524 11:48:35.522 Creating bitmap for unique blocks for fsd=fsd1. 1 bitmaps for a total of 450 bits, identifying 202 unique blocks
+11:48:35.524 11:48:35.523 Writing control file for anchor=/root/old-pool at start of run.
+11:48:35.569 11:48:35.568 Completed control file for anchor=/root/old-pool at start of run.  dirs: 12/0 files: 450/0 sizes: 450m/0/0/0
+11:48:35.584 11:48:35.584 Completed initializeFileAnchor for fsd1: 0.09
+11:48:35.635 11:48:35.634 Started 8 threads for fwd=format,fsd=fsd1
+11:48:35.638 11:48:35.638 Started 8 FwgThreads for rd=format_for_rd1 For loops: None
+11:48:35.638 11:48:35.638 Waiting for task synchronization
+11:48:35.638 11:48:35.638 task_wait_start_complete: FwgThread OpFormat /root/old-pool 1
+11:48:35.840 11:48:35.839 Requesting full garbage collection
+11:48:35.841 11:48:35.841 GcTracker: cum:   2 intv:  0 ms:       0 mss:  0.00% Heap_MB max:   990 curr:   124 used:    29 free:    95 
+11:48:35.857 11:48:35.857 GcTracker: cum:   3 intv:  1 ms:      15 mss:  0.00% Heap_MB max:   990 curr:   124 used:    19 free:   105 
+11:48:35.859 11:48:35.859 task_wait_start_complete() end
+
+<a name="_42121758"></a><i><b>11:48:36.004 Starting RD=format_for_rd1</b></i>
+
+11:48:36.006 11:48:36.006 task_run_all(): 9 tasks
+11:48:36.121 11:48:36.119 Erasing Data Validation map: fsd1
+11:48:36.141 11:48:36.139 Message to master: anchor=/root/old-pool mkdir complete.
+11:48:38.587 11:48:38.587 Message to master: anchor=/root/old-pool create complete.
+11:48:38.692 11:48:38.692 
+11:48:38.694 11:48:38.694 Miscellaneous statistics:
+11:48:38.695 11:48:38.695 FILE_CREATES        Files created:                                  450
+11:48:38.699 11:48:38.699 DIRECTORY_CREATES   Directories created:                             12
+11:48:38.700 11:48:38.699 WRITE_OPENS         Files opened for write activity:                450
+11:48:38.700 11:48:38.700 DIR_EXISTS          Directory may not exist (yet):                    6
+11:48:38.701 11:48:38.700 FILE_CLOSES         Close requests:                                 450
+11:48:38.701 11:48:38.700 
+11:48:38.704 11:48:38.703 Dedup counters. Bytes written: 3.516g across: 1.578g (44.9%) on_sd: 0 (0.0%) dups: 1.938g (55.1%) resulting dedup=49.9% (2.00:1)
+11:48:38.709 11:48:38.709 Dedup options: 
+11:48:38.709 dedup_type:                            1
+11:48:38.709 dedup_ratio:                        2.00
+11:48:38.709 dedup_unit:                    1,048,576
+11:48:38.710 flipflop:                             no
+11:48:38.710 hot_dedup_sets:                        0
+11:48:38.710 hot_dedup_blocks:                      0
+11:48:38.710 dedup_sets_reqd:                      5%
+11:48:38.710 dedup_sets_used:                      22
+11:48:38.710 
+11:48:38.710 unique_blocks:                       202
+11:48:38.710 duplicate_blocks:                    248 (including 22 originals)
+11:48:38.710 dedup_pct:                         50.00
+11:48:38.710 dedup_adjusted:                    45.00
+11:48:38.710 total_size:                         450m
+11:48:38.710 unit_blocks:                         450
+11:48:38.710 
+11:48:38.710 Info only reliable if xfersize is multiple of dedupunit:
+11:48:38.710 uniques_written:                   1,616; expected 202; delta 1,414 
+11:48:38.710 duplicates_written:                1,984; expected 248; delta 1,736 
+11:48:38.710 Total writes:                      3,600; delta 3,150
+11:48:38.710 flipflops:                             0
+11:48:38.710 
+11:48:38.710 Dsim counts: Hash size:              224 (202 uniques + 22 sets)
+11:48:38.710 Dsim counts: Duplicates:             226
+11:48:38.710 Dsim counts: Ratio:                 2.01 (2.00893)
+11:48:38.710 
+11:48:38.718 11:48:38.717 Java Heap in MB. max:  989.875; current:  123.938; used:   27.444; free:   96.493
+11:48:38.719 11:48:38.718 Maximum native memory allocation:   16,777,216; Current allocation:   16,777,216
+11:48:39.210 11:48:39.209 Writing control file for anchor=/root/old-pool at end of run.
+11:48:39.250 11:48:39.248 Completed control file for anchor=/root/old-pool at end of run.  dirs: 12/12 files: 450/450 sizes: 450m/450m/450/450m
+11:48:39.250 11:48:39.248 End of run
+11:48:39.250 11:48:39.248 **********
+11:48:39.250 
+11:48:39.250 
+11:48:39.393 11:48:39.393 Beginning of run setup
+11:48:39.394 11:48:39.394 **********************
+11:48:39.394 
+11:48:39.394 
+11:48:39.480 11:48:39.480 Starting initializeFileAnchor for rd=rd1 For loops: None anchor=fsd1
+11:48:39.482 11:48:39.482 Reading control file for anchor=/root/old-pool
+11:48:39.488 11:48:39.488 Completed reading control file.
+11:48:39.488 11:48:39.488 Completed the creation of the directory list for /root/old-pool: 12 directories.
+11:48:39.493 11:48:39.493 Generated 450 file names; total anchor size: 450m (471,859,200)
+11:48:39.494 11:48:39.494 No deletes and creates. Control file not cleared.
+11:48:39.494 11:48:39.494 During anchor creation for anchor=/root/old-pool there were 12 directories and 450 files
+11:48:39.494 11:48:39.494 Completed initializeFileAnchor for fsd1: 0.01
+11:48:39.503 11:48:39.503 Started 2 threads for fwd=fwd1,fsd=fsd1,operation=read
+11:48:39.503 11:48:39.503 Started 2 FwgThreads for rd=rd1 For loops: None
+11:48:39.503 11:48:39.503 Waiting for task synchronization
+11:48:39.503 11:48:39.503 task_wait_start_complete: FwgWaiter 1
+11:48:39.705 11:48:39.704 Requesting full garbage collection
+11:48:39.705 11:48:39.704 GcTracker: cum:   3 intv:  0 ms:       0 mss:  0.00% Heap_MB max:   990 curr:   124 used:    33 free:    91 
+11:48:39.721 11:48:39.719 GcTracker: cum:   4 intv:  1 ms:      13 mss:  0.00% Heap_MB max:   990 curr:   124 used:    19 free:   105 
+11:48:39.721 11:48:39.719 task_wait_start_complete() end
+
+<a name="_20671747"></a><i><b>11:48:40.001 Starting RD=rd1; elapsed=30; fwdrate=max. For loops: None</b></i>
+
+11:48:40.007 11:48:40.007 task_run_all(): 3 tasks
+11:49:10.192 11:49:10.191 
+11:49:10.196 11:49:10.191 Miscellaneous statistics:
+11:49:10.196 11:49:10.191 READ_OPENS          Files opened for read activity:              43,136
+11:49:10.196 11:49:10.191 FILE_BUSY           File busy:                                      109
+11:49:10.196 11:49:10.191 FILE_CLOSES         Close requests:                              43,136
+11:49:10.196 11:49:10.191 
+11:49:10.196 11:49:10.191 Dedup counters. Bytes written: 0 across: 0 (NaN%) on_sd: 0 (NaN%) dups: 0 (NaN%) resulting dedup=NaN% (NaN:1)
+11:49:10.196 11:49:10.192 Dedup options: 
+11:49:10.196 dedup_type:                            1
+11:49:10.196 dedup_ratio:                        2.00
+11:49:10.196 dedup_unit:                    1,048,576
+11:49:10.196 flipflop:                             no
+11:49:10.196 hot_dedup_sets:                        0
+11:49:10.196 hot_dedup_blocks:                      0
+11:49:10.196 dedup_sets_reqd:                      5%
+11:49:10.196 dedup_sets_used:                      22
+11:49:10.196 
+11:49:10.196 unique_blocks:                       202
+11:49:10.196 duplicate_blocks:                    248 (including 22 originals)
+11:49:10.196 dedup_pct:                         50.00
+11:49:10.196 dedup_adjusted:                    45.00
+11:49:10.196 total_size:                         450m
+11:49:10.196 unit_blocks:                         450
+11:49:10.196 
+11:49:10.196 Info only reliable if xfersize is multiple of dedupunit:
+11:49:10.196 uniques_written:                       0; expected 202; delta -202 
+11:49:10.196 duplicates_written:                    0; expected 248; delta -248 
+11:49:10.196 Total writes:                          0; delta -450
+11:49:10.196 flipflops:                             0
+11:49:10.196 
+11:49:10.196 Dsim counts: Hash size:              224 (202 uniques + 22 sets)
+11:49:10.196 Dsim counts: Duplicates:             226
+11:49:10.196 Dsim counts: Ratio:                 2.01 (2.00893)
+11:49:10.196 
+11:49:10.196 11:49:10.192 Java Heap in MB. max:  989.875; current:  123.875; used:   47.360; free:   76.515
+11:49:10.196 11:49:10.192 Maximum native memory allocation:   20,971,520; Current allocation:    4,194,304
+11:49:10.197 11:49:10.197 Writing control file for anchor=/root/old-pool at end of run.
+11:49:10.237 11:49:10.236 Completed control file for anchor=/root/old-pool at end of run.  dirs: 12/12 files: 450/450 sizes: 450m/450m/450/450m
+11:49:10.237 11:49:10.236 End of run
+11:49:10.237 11:49:10.236 **********
+11:49:10.237 
+11:49:10.237 
+11:49:11.140 11:49:11.138 Master is requesting slave shutdown
+11:49:11.140 11:49:11.138 Java Heap in MB. max:  989.875; current:  123.875; used:   48.698; free:   75.177

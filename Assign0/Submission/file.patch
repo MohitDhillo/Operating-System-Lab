@@ -1,0 +1,157 @@
+diff -ruN xv6-orig/drawtest.c xv6-public/drawtest.c
+--- xv6-orig/drawtest.c	1970-01-01 05:30:00.000000000 +0530
++++ xv6-public/drawtest.c	2022-08-12 13:05:37.847924343 +0530
+@@ -0,0 +1,11 @@
++#include "types.h"
++#include "stat.h"
++#include "user.h"
++
++int main(void){
++    static char buf[5000];
++    printf(1, "draw sys call returns %d\n", draw((void*) buf, 5000));
++
++    printf(1, "%s", buf);
++    exit();
++}
+\ No newline at end of file
+diff -ruN xv6-orig/Makefile xv6-public/Makefile
+--- xv6-orig/Makefile	2022-08-12 15:41:57.719515777 +0530
++++ xv6-public/Makefile	2022-08-12 13:17:03.125225804 +0530
+@@ -109,7 +109,7 @@
+ 	./sign.pl bootblock
+ 
+ entryother: entryother.S
+-	$(CC) $(CFLAGS) -fno-pic -nostdinc -I. -c entryother.S
++	$(CC) $(CFLAGS) -fno-pic -nostdinc -I	. -c entryother.S
+ 	$(LD) $(LDFLAGS) -N -e start -Ttext 0x7000 -o bootblockother.o entryother.o
+ 	$(OBJCOPY) -S -O binary -j .text bootblockother.o entryother
+ 	$(OBJDUMP) -S bootblockother.o > entryother.asm
+@@ -181,6 +181,7 @@
+ 	_usertests\
+ 	_wc\
+ 	_zombie\
++	_drawtest\
+ 
+ fs.img: mkfs README $(UPROGS)
+ 	./mkfs fs.img README $(UPROGS)
+@@ -249,7 +250,7 @@
+ 
+ EXTRA=\
+ 	mkfs.c ulib.c user.h cat.c echo.c forktest.c grep.c kill.c\
+-	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
++	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c drawtest.c\
+ 	printf.c umalloc.c\
+ 	README dot-bochsrc *.pl toc.* runoff runoff1 runoff.list\
+ 	.gdbinit.tmpl gdbutil\
+diff -ruN xv6-orig/syscall.c xv6-public/syscall.c
+--- xv6-orig/syscall.c	2022-08-12 15:41:57.723515872 +0530
++++ xv6-public/syscall.c	2022-08-12 12:32:37.380080699 +0530
+@@ -103,6 +103,7 @@
+ extern int sys_wait(void);
+ extern int sys_write(void);
+ extern int sys_uptime(void);
++extern int sys_draw(void);
+ 
+ static int (*syscalls[])(void) = {
+ [SYS_fork]    sys_fork,
+@@ -126,6 +127,7 @@
+ [SYS_link]    sys_link,
+ [SYS_mkdir]   sys_mkdir,
+ [SYS_close]   sys_close,
++[SYS_draw]    sys_draw,
+ };
+ 
+ void
+diff -ruN xv6-orig/syscall.h xv6-public/syscall.h
+--- xv6-orig/syscall.h	2022-08-12 15:41:57.723515872 +0530
++++ xv6-public/syscall.h	2022-08-12 12:31:43.938273165 +0530
+@@ -20,3 +20,4 @@
+ #define SYS_link   19
+ #define SYS_mkdir  20
+ #define SYS_close  21
++#define SYS_draw   22
+\ No newline at end of file
+diff -ruN xv6-orig/sysproc.c xv6-public/sysproc.c
+--- xv6-orig/sysproc.c	2022-08-12 15:41:57.723515872 +0530
++++ xv6-public/sysproc.c	2022-08-12 14:58:40.278794100 +0530
+@@ -89,3 +89,60 @@
+   release(&tickslock);
+   return xticks;
+ }
++
++int sys_draw(void){
++  void *buf;
++  uint size;
++
++  argptr(0, (void*)&buf, sizeof(buf));
++  argptr(1, (void*)&size, sizeof(size));
++
++  char text[] = R"(
++    
++    Say Hi to Squirtle!
++
++
++               _,........__
++            ,-'            "`-.
++          ,'                   `-.
++        ,'                        \
++      ,'                           .
++      .'\               ,"".       `
++     ._.'|             / |  `       \
++     |   |            `-.'  ||       `.
++     |   |            '-._,'||       | \
++     .`.,'             `..,'.'       , |`-.
++     l                       .'`.  _/  |   `.
++     `-.._'-   ,          _ _'   -" \  .     `
++`."""""'-.`-...,---------','         `. `....__.
++.'        `"-..___      __,'\          \  \     \
++\_ .          |   `""""'    `.           . \     \
++  `.          |              `.          |  .     L
++    `.        |`--...________.'.        j   |     |
++      `._    .'      |          `.     .|   ,     |
++         `--,\       .            `7""' |  ,      |
++            ` `      `            /     |  |      |    _,-'"""`-.
++             \ `.     .          /      |  '      |  ,'          `.
++              \  v.__  .        '       .   \    /| /              \
++               \/    `""\"""""""`.       \   \  /.''                |
++                `        .        `._ ___,j.  `/ .-       ,---.     |
++                ,`-.      \         ."     `.  |/        j     `    |
++               /    `.     \       /         \ /         |     /    j
++              |       `-.   7-.._ .          |"          '         /
++              |          `./_    `|          |            .     _,'
++              `.           / `----|          |-............`---'
++                \          \      |          |
++               ,'           )     `.         |
++                7____,,..--'      /          |
++                                  `---.__,--.'gunjan
++
++                                  
++    )";
++
++    
++    if(sizeof(text)>size){
++      return -1;
++    }
++    strncpy((char *)buf, text, size);
++    return sizeof(text); 
++}
+diff -ruN xv6-orig/user.h xv6-public/user.h
+--- xv6-orig/user.h	2022-08-12 15:41:57.723515872 +0530
++++ xv6-public/user.h	2022-08-12 12:58:58.432850011 +0530
+@@ -23,6 +23,7 @@
+ char* sbrk(int);
+ int sleep(int);
+ int uptime(void);
++int draw(void*, uint);
+ 
+ // ulib.c
+ int stat(const char*, struct stat*);
+diff -ruN xv6-orig/usys.S xv6-public/usys.S
+--- xv6-orig/usys.S	2022-08-12 15:41:57.723515872 +0530
++++ xv6-public/usys.S	2022-08-12 13:02:38.736668959 +0530
+@@ -29,3 +29,4 @@
+ SYSCALL(sbrk)
+ SYSCALL(sleep)
+ SYSCALL(uptime)
++SYSCALL(draw)
+\ No newline at end of file
